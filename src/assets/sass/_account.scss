@@ -1,0 +1,271 @@
+.account-elements {
+    padding-top: 50px;
+
+    .container {
+        .row {
+            background: none;
+
+            .card {
+                background: none !important;
+                border: 1px solid #495057 !important;
+            }
+
+            .account-left-side {
+                position: relative;
+
+                .edit-button-div {
+                    display: flex;
+                    justify-content: end;
+
+                    /* From Uiverse.io by vinodjangid07 */
+                    .Btn {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        width: 100px;
+                        height: 30px;
+                        border: none;
+                        padding: 0px 20px;
+                        background-color: red;
+                        color: white;
+                        font-weight: 500;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 0px rgb(154, 0, 0);
+                        transition-duration: .3s;
+                    }
+
+                    .svg {
+                        width: 13px;
+                        position: absolute;
+                        right: 0;
+                        margin-right: 20px;
+                        fill: white;
+                        transition-duration: .3s;
+                    }
+
+                    .Btn:hover {
+                        color: transparent;
+                    }
+
+                    .Btn:hover svg {
+                        right: 43%;
+                        margin: 0;
+                        padding: 0;
+                        border: none;
+                        transition-duration: .3s;
+                    }
+
+                    .Btn:active {
+                        transform: translate(3px, 3px);
+                        transition-duration: .3s;
+                        box-shadow: 2px 2px 0px rgb(152, 41, 41);
+                    }
+                }
+
+                .card-body {
+                    .users-logo {
+                        background: none;
+
+                        img {
+                            width: 200px !important;
+                            height: 200px !important;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            background: none;
+                        }
+                    }
+
+                    .user-form-information {
+                        form {
+                            input {
+                                width: 100%;
+                                text-align: center;
+                                border: 1px solid red;
+                                border-radius: 50em;
+                                padding: 5px 0px;
+                                background: none;
+                            }
+
+                            input::placeholder {
+                                color: red;
+                            }
+                        }
+
+                        .order-div {
+                            border: 1px solid red;
+                            padding: 5px 10px 5px 10px;
+
+                            .order-button-div {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                cursor: pointer;
+
+                                .order-button {
+                                    background: none;
+                                    border: none;
+                                }
+                            }
+
+                            .order-content {
+                                border-top: 1px solid red;
+                                padding: 10px;
+                                transition: 1s !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .account-right-side {
+                .user-config-website {
+                    background: none;
+
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        color: white;
+                        background: none;
+                    }
+
+                    .bg-color-buttons {
+                        background: none;
+
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            background: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            border: 1px solid orange;
+                            border-radius: 50em;
+                            padding-block: 10px;
+
+                            li {
+                                background: none;
+
+                                button {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    border: none;
+                                    position: relative;
+                                    border: 1px solid #212529;
+
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        inset: 1px;
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 50%;
+                                    }
+                                }
+
+                                .red {
+                                    background: red;
+
+                                    &::before {
+                                        border: 1px solid red;
+                                    }
+                                }
+
+                                .blue {
+                                    background: blue;
+
+                                    &::before {
+                                        border: 1px solid blue;
+                                    }
+                                }
+
+                                .orange {
+                                    background: orange;
+
+                                    &::before {
+                                        border: 1px solid orange;
+                                    }
+                                }
+
+                                .white {
+                                    background: white;
+
+                                    &::before {
+                                        border: 1px solid white;
+                                    }
+                                }
+
+                                .purple {
+                                    background: purple;
+
+                                    &::before {
+                                        border: 1px solid purple;
+                                    }
+                                }
+
+                                .brown {
+                                    background: brown;
+
+                                    &::before {
+                                        border: 1px solid brown;
+                                    }
+                                }
+
+                                .yellow {
+                                    background: yellow;
+
+                                    &::before {
+                                        border: 1px solid yellow;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .fonts-config-website {
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                            li {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+
+                                button {
+                                    width: 100%;
+                                    background: none;
+                                    border: 1px solid orange;
+                                    padding-block: 10px;
+                                    border-radius: 50em;
+                                    font-size: 20px;
+                                }
+
+                                span {
+                                    border: 1px solid orange;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 50em;
+                                    padding: 10px;
+
+                                    .star {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

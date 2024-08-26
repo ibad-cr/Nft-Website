@@ -1,0 +1,2024 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sankofa+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Nova+Round&family=Rubik+Wet+Paint&display=swap');
+
+.bodyBgColor {
+    background: #212529;
+    height: max-content;
+}
+
+.changeBgColorRed {
+    background: red;
+    transition: 0.4s;
+
+    .row .card {
+        border: 2px solid white !important;
+    }
+
+    .account-elements {
+        .container .row .card {
+            border: 2px solid white !important;
+        }
+
+        form {
+            input {
+                border: 2px solid white !important;
+            }
+
+            input::placeholder {
+                color: rgb(0, 0, 0) !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid white !important;
+
+            .order-content {
+                border-top: 1px solid white !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid white !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid white !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid white;
+
+            h1 {
+                border-bottom: 1px solid white;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid white !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: white !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid white !important;
+
+            .dropdown-btn {
+                border: 2px solid white !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: red !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px white !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid white !important;
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: white !important;
+        }
+    }
+
+    .home-wrapper {
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid white !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px white !important;
+
+            svg {
+                fill: white !important;
+            }
+
+            .circle {
+                background-color: purple !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px black !important;
+                color: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px white !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .email-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .reset {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    .sing-up-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .all-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.changeBgColorBlue {
+    background: blue;
+    transition: 0.4s;
+
+    .row .card {
+        border: 2px solid white !important;
+    }
+
+    .account-elements {
+        .container .row .card {
+            border: 2px solid white !important;
+        }
+
+        form {
+            input {
+                border: 2px solid white !important;
+            }
+
+            input::placeholder {
+                color: white !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid white !important;
+
+            .order-content {
+                border-top: 1px solid white !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid white !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid white !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid white;
+
+            h1 {
+                border-bottom: 1px solid white;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid white !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: white !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid white !important;
+
+            .dropdown-btn {
+                border: 2px solid white !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: blue !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px white !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid white !important;
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: white !important;
+        }
+    }
+
+    .home-wrapper {
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid white !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px white !important;
+
+            svg {
+                fill: white !important;
+            }
+
+            .circle {
+                background-color: black !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px black !important;
+                color: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px white !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .email-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .reset {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    .sing-up-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .all-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.changeBgColorOrange {
+    background: orange;
+    transition: 0.4s;
+
+    .row .card {
+        border: 2px solid white !important;
+    }
+
+    .account-elements {
+        .container .row .card {
+            border: 2px solid white !important;
+        }
+
+        form {
+            input {
+                border: 2px solid white !important;
+            }
+
+            input::placeholder {
+                color: rgb(0, 0, 0) !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid white !important;
+
+            .order-content {
+                border-top: 1px solid white !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid white !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid white !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid white;
+
+            h1 {
+                border-bottom: 1px solid white;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid white !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: white !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid white !important;
+
+            .dropdown-btn {
+                border: 2px solid white !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: orange !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px white !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid white !important;
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: white !important;
+        }
+    }
+
+    .home-wrapper {
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid white !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px white !important;
+
+            svg {
+                fill: white !important;
+            }
+
+            .circle {
+                background-color: black !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px black !important;
+                color: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px white !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .email-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .reset {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    .sing-up-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .all-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.changeBgColorWhite {
+    background: white;
+    transition: 0.4s;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: black !important;
+        background: none;
+    }
+
+    .row .card {
+        border: 2px solid black !important;
+    }
+
+    .account-elements {
+
+        .container .row .card {
+            border: 2px solid black !important;
+        }
+
+        form {
+            input {
+                border: 2px solid black !important;
+            }
+
+            input::placeholder {
+                color: rgb(0, 0, 0) !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid black !important;
+
+            .order-button {
+                color: black !important;
+            }
+
+            .fa-solid {
+                color: black;
+            }
+
+            .order-content {
+                border-top: 2px solid black !important;
+                color: black !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid black !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid black !important;
+            }
+
+            .fonts-config-website ul li button {
+                color: #000 !important;
+            }
+
+            span {
+                background: black !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid black;
+
+            h1 {
+                border-bottom: 1px solid black !important;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid black !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: black !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid black !important;
+
+            .dropdown-btn {
+                border: 2px solid black !important;
+                color: black !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: white !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px black !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid black !important;
+        }
+
+        .sort-dropdown-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black !important;
+            border-radius: 50% !important;
+
+            .fa-solid {
+                color: black !important;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: black !important;
+        }
+
+        .fa-solid,
+        .fa-regular {
+            color: black !important;
+        }
+
+        .card-information-div {
+
+            .card-title {
+                color: orange !important;
+            }
+
+            .card-text {
+                color: white !important;
+            }
+        }
+    }
+
+    .home-wrapper {
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid black !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px black !important;
+
+            .text {
+                color: black !important;
+            }
+
+            svg {
+                fill: black !important;
+            }
+
+            .circle {
+                background-color: black !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px black !important;
+            }
+
+            &:hover .text {
+                color: white !important;
+            }
+
+            &:hover svg {
+                fill: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px black !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid black !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid black !important;
+                    border-left: 5px solid black !important;
+                }
+
+                input {
+                    border-bottom: 1px solid black !important;
+                    color: black !important;
+                }
+
+                .email-label {
+                    color: black !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: black !important;
+                        color: white;
+                    }
+
+                    .reset {
+                        border: 1px solid black !important;
+                        transition: 0.5s;
+                        color: black !important;
+
+                        &:hover {
+                            color: white !important;
+                        }
+
+                        &:hover::before {
+                            background: black !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    span {
+                        color: black;
+                    }
+
+                    .sing-up-button {
+                        border: 1px solid black !important;
+                        transition: 0.5s;
+                        color: black !important;
+
+                        &:hover {
+                            color: white !important;
+                        }
+
+                        &:hover::before {
+                            background: black !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid black !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid black !important;
+                    border-left: 5px solid black !important;
+                }
+
+                input {
+                    border-bottom: 1px solid black !important;
+                    color: black;
+                }
+
+
+                .all-label {
+                    color: black !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: black !important;
+                        color: white;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid black !important;
+                        transition: 0.5s;
+                        color: black;
+
+                        &:hover {
+                            color: white !important;
+
+                        }
+
+                        &:hover::before {
+                            background: black !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wishlist-components {
+        .wishlist-header {
+            border-bottom: 1px solid black;
+
+            .fa-solid {
+                color: black !important;
+            }
+
+            .right-items {
+                display: flex;
+                gap: 20px;
+
+                .wishliat-clear-button {
+                    color: black !important;
+                }
+            }
+        }
+    }
+
+    .wishlist-single-card {
+        .card {
+            background: #343a40;
+        }
+
+        .products-information {
+            .left-side {
+                .product-name {
+                    h5 {
+                        color: orangered !important;
+                    }
+                }
+
+                .product-text {
+                    h6 {
+                        font-size: 13px;
+                        color: white !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .basket-components {
+        height: max-content;
+
+        .basket-header {
+            border-bottom: 1px solid black;
+
+            .total-price {
+                color: black;
+            }
+
+            .right-items {
+                .basket-clear-button {
+                    color: black !important;
+                }
+            }
+        }
+    }
+
+    .basket-single-card {
+        .card {
+            background: #343a40;
+
+            .products-information {
+                .left-side {
+                    .product-name {
+                        h5 {
+                            color: orangered !important;
+                        }
+                    }
+
+                    .product-text {
+                        h6 {
+                            color: white !important;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.changeBgColorPurple {
+    background: purple;
+    transition: 0.4s;
+
+    .row .card {
+        border: 2px solid white !important;
+    }
+
+    .account-elements {
+        .container .row .card {
+            border: 2px solid white !important;
+        }
+
+        form {
+            input {
+                border: 2px solid white !important;
+            }
+
+            input::placeholder {
+                color: white !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid white !important;
+
+            .order-content {
+                border-top: 1px solid white !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid white !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid white !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid white;
+
+            h1 {
+                border-bottom: 1px solid white;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid white !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: white !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid white !important;
+
+            .dropdown-btn {
+                border: 2px solid white !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: purple !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px white !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid white !important;
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: white !important;
+        }
+    }
+
+    .home-wrapper {
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid white !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px white !important;
+
+            svg {
+                fill: white !important;
+            }
+
+            .circle {
+                background-color: black !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px black !important;
+                color: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px white !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .email-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .reset {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    .sing-up-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .all-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.changeBgColorBrown {
+    background: brown;
+    transition: 0.4s;
+
+    .row .card {
+        border: 2px solid white !important;
+    }
+
+    .account-elements {
+        .container .row .card {
+            border: 2px solid white !important;
+        }
+
+        form {
+            input {
+                border: 2px solid white !important;
+            }
+
+            input::placeholder {
+                color: white !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid white !important;
+
+            .order-content {
+                border-top: 1px solid white !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid white !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid white !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid white;
+
+            h1 {
+                border-bottom: 1px solid white;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid white !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: white !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid white !important;
+
+            .dropdown-btn {
+                border: 2px solid white !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: brown !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px white !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid white !important;
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: white !important;
+        }
+    }
+
+    .home-wrapper {
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid white !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px white !important;
+
+            svg {
+                fill: white !important;
+            }
+
+            .circle {
+                background-color: black !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px black !important;
+                color: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px white !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .email-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .reset {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    .sing-up-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid white !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid white !important;
+                    border-left: 5px solid white !important;
+                }
+
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+
+
+                .all-label {
+                    color: white !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: white !important;
+                        color: black;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid white !important;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: black !important;
+
+                        }
+
+                        &:hover::before {
+                            background: white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.changeBgColorYellow {
+    background: yellow;
+    transition: 0.4s;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: purple !important;
+    }
+
+    .row .card {
+        border: 2px solid purple !important;
+    }
+
+    .account-elements {
+
+        .container .row .card {
+            border: 2px solid purple !important;
+        }
+
+        form {
+            input {
+                border: 2px solid purple !important;
+            }
+
+            input::placeholder {
+                color: rgb(0, 0, 0) !important;
+            }
+        }
+
+        .order-div {
+            border: 2px solid purple !important;
+
+            .order-button {
+                color: purple !important;
+            }
+
+            .fa-solid {
+                color: purple;
+            }
+
+            .order-content {
+                border-top: 2px solid purple !important;
+                color: purple !important;
+            }
+        }
+
+        .account-right-side {
+            .bg-color-buttons ul {
+                border: 2px solid purple !important;
+            }
+
+            .fonts-config-website ul li button,
+            span {
+                border: 2px solid purple !important;
+            }
+
+            .fonts-config-website ul li button {
+                color: #000 !important;
+            }
+
+            span {
+                background: purple !important;
+            }
+        }
+    }
+
+    .shop-container {
+        .shop-opening-part {
+            border: 2px solid black;
+
+            h1 {
+                border-bottom: 1px solid purple !important;
+            }
+
+            .image-animation-border {
+
+                .animation-border,
+                .animation-circle-one,
+                .animation-circle-two {
+                    border: 2px solid purple !important;
+                }
+
+                .animation-circle-one,
+                .animation-circle-two {
+                    background: purple !important;
+                }
+            }
+        }
+
+        .border-div {
+            border: 2px solid purple !important;
+
+            .dropdown-btn {
+                border: 2px solid purple !important;
+                color: purple !important;
+            }
+
+            .dropdown-btn::after,
+            .dropdown-btn::before {
+                background-color: yellow !important;
+            }
+
+            .dropdown-btn:hover {
+                box-shadow: inset 0px 0px 25px purple !important;
+            }
+        }
+
+        .cards-section {
+            border: 2px solid purple !important;
+        }
+
+        .sort-dropdown-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid purple !important;
+            border-radius: 50% !important;
+
+            .fa-solid {
+                color: purple !important;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .shop-single-card {
+        .product-price {
+            color: purple !important;
+        }
+
+        .fa-solid,
+        .fa-regular {
+            color: purple !important;
+        }
+
+        .card-information-div {
+
+            .card-title {
+                color: orange !important;
+            }
+
+            .card-text {
+                color: white !important;
+            }
+        }
+    }
+
+    .home-wrapper {
+        .nft-information-text {
+            color: purple !important;
+        }
+
+        .opening-part,
+        .left-side,
+        .cards-section {
+            border: 2px solid purple !important;
+        }
+
+        .animated-button {
+            box-shadow: 0 0 0 2px purple !important;
+
+            .text {
+                color: purple !important;
+            }
+
+            svg {
+                fill: purple !important;
+            }
+
+            .circle {
+                background-color: purple !important;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px purple !important;
+            }
+
+            &:hover .text {
+                color: white !important;
+            }
+
+            &:hover svg {
+                fill: white !important;
+            }
+
+            &:active {
+                box-shadow: 0 0 0 4px purple !important;
+            }
+        }
+    }
+
+    .login-window {
+        .container form {
+            border-left: 5px solid purple !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid purple !important;
+                    border-left: 5px solid purple !important;
+                }
+
+                input {
+                    border-bottom: 1px solid purple !important;
+                    color: purple !important;
+                }
+
+                .email-label {
+                    color: purple !important;
+                }
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    .login {
+                        background: purple !important;
+                        color: white;
+                    }
+
+                    .reset {
+                        border: 1px solid purple !important;
+                        transition: 0.5s;
+                        color: purple !important;
+
+                        &:hover {
+                            color: white !important;
+                        }
+
+                        &:hover::before {
+                            background: purple !important;
+                        }
+                    }
+                }
+
+                .register-section {
+                    span {
+                        color: purple;
+                    }
+
+                    .sing-up-button {
+                        border: 1px solid purple !important;
+                        transition: 0.5s;
+                        color: purple !important;
+
+                        &:hover {
+                            color: white !important;
+                        }
+
+                        &:hover::before {
+                            background: purple !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-window {
+        .container form {
+            border-left: 5px solid purple !important;
+
+            .input-section {
+                input:focus {
+                    border-bottom: 1px solid purple !important;
+                    border-left: 5px solid purple !important;
+                }
+
+                input {
+                    border-bottom: 1px solid purple !important;
+                    color: purple;
+                }
+
+
+                .all-label {
+                    color: purple !important;
+                }
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    .submit-button {
+                        background: purple !important;
+                        color: white;
+                    }
+
+                    .back-sing-in-button {
+                        border: 1px solid purple !important;
+                        transition: 0.5s;
+                        color: purple;
+
+                        &:hover {
+                            color: white !important;
+
+                        }
+
+                        &:hover::before {
+                            background: purple !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wishlist-components {
+        .wishlist-header {
+            border-bottom: 1px solid purple;
+
+            .fa-solid {
+                color: purple !important;
+            }
+
+            .right-items {
+                display: flex;
+                gap: 20px;
+
+                .wishliat-clear-button {
+                    color: purple !important;
+                }
+            }
+        }
+    }
+
+    .wishlist-single-card {
+        .card {
+            background: #343a40;
+        }
+
+        .products-information {
+            .left-side {
+                .product-name {
+                    h5 {
+                        color: orangered !important;
+                    }
+                }
+
+                .product-text {
+                    h6 {
+                        font-size: 13px;
+                        color: white !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .basket-components {
+        height: max-content;
+
+        .basket-header {
+            border-bottom: 1px solid purple;
+
+            .total-price {
+                color: purple;
+            }
+
+            .right-items {
+                .basket-clear-button {
+                    color: purple !important;
+                }
+            }
+        }
+    }
+
+    .basket-single-card {
+        .card {
+            background: #343a40;
+
+            .products-information {
+                .left-side {
+                    .product-name {
+                        h5 {
+                            color: orangered !important;
+                        }
+                    }
+
+                    .product-text {
+                        h6 {
+                            color: white !important;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bodyMainFonts {
+    font-family: 'Zen Dots', cursive;
+}
+
+.zen-dots {
+    font-family: 'Zen Dots', cursive;
+}
+
+.koulen-font {
+    font-family: 'Koulen', cursive;
+}
+
+.bungee-font {
+    font-family: 'Bungee Tint', cursive;
+}
+
+.foldit-font {
+    font-family: 'Foldit', sans-serif;
+}
+
+.chakra-font {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.righteous-font {
+    font-family: 'Righteous', cursive;
+}
+
+.adiowide-font {
+    font-family: 'Audiowide', cursive;
+}
+
+.slackey-font {
+    font-family: 'Slackey', cursive;
+}
+
+.sankofaDisplay-font {
+    font-family: 'Sankofa Display', cursive;
+}
+
+.gruppo-font {
+    font-family: 'Gruppo', cursive;
+}
+
+.novaRound-font {
+    font-family: 'Nova Round', cursive;
+}
+
+.akaya-font {
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.rubikWet-font {
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+/* Import other CSS files */
+@import 'navbar';
+@import 'home';
+@import 'shop';
+@import 'shopSingleCard';
+@import 'login';
+@import 'regsiter';
+@import 'account';
+@import 'basket';
+@import 'wishlist';
+@import 'basketSingleCard';
+@import 'wishlistSingleCard';
+@import 'homeSwiperJs';

@@ -1,0 +1,159 @@
+.register-window {
+    // .Toastify__toast--default {
+    //     background: none !important;
+    // }
+
+    // .Toastify__toast--success {
+    //     background: none !important;
+    // }
+
+    // .Toastify__toast--error {
+    //     background: none !important;
+    // }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        form {
+            // max-width: 1100px;
+            width: 100%;
+            border-left: 5px solid orange !important;
+            padding: 20px;
+
+            .input-section {
+                display: flex;
+                flex-direction: column;
+                background: none !important;
+                gap: 20px;
+
+                input:focus {
+                    background: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                    border-bottom: 1px solid #ADB5BD;
+                    border-left: 5px solid orange;
+                }
+
+                input {
+                    border: none;
+                    background: none !important;
+                    border-bottom: 1px solid #ADB5BD;
+                    transition: 0.3s;
+                    width: 100%;
+                }
+
+                .all-input {
+                    position: relative;
+                    margin-top: 20px;
+                }
+
+
+                .all-label {
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                    background: white;
+                    padding: 0 5px;
+                    transition: all 0.3s ease;
+                    pointer-events: none;
+                    color: #666;
+                    background: none;
+                }
+
+                .all-input input:focus+.all-label,
+                .all-input input:not(:placeholder-shown)+.all-label {
+                    left: -100px;
+                    opacity: 0;
+                }
+
+            }
+
+            .buttons {
+                .submit-reset-buttons {
+                    display: flex;
+                    gap: 10px;
+
+                    button {
+                        padding: 5px 0px;
+                        border: none;
+                        border-radius: 8px;
+                    }
+
+                    .submit-button {
+                        background: orange;
+                        width: 80%;
+                    }
+
+                    .back-sing-in-button {
+                        width: 20%;
+                        border: 1px solid #ADB5BD;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                    }
+
+                    .back-sing-in-button {
+                        padding: 5px 0;
+                        border: 1px solid #ADB5BD;
+                        border-radius: 8px;
+                        position: relative;
+                        background-color: transparent;
+                        color: black;
+                        overflow: hidden;
+                        z-index: 1;
+                        color: white;
+                    }
+
+                    .back-sing-in-button::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: transparent;
+                        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                        transition: clip-path 0.3s ease, background 0.3s ease;
+                        z-index: -1;
+                    }
+
+                    .back-sing-in-button:hover::before {
+                        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+                        background: #495057;
+                    }
+                }
+            }
+
+            .password-validation-check.close-list {
+                display: none;
+            }
+
+            .password-validation-check {
+                background: none !important;
+
+                .validated-list {
+                    background: none !important;
+
+                    li {
+                        font-size: 14px;
+                        background: none !important;
+
+                        .wrong-check {
+                            color: red !important;
+                            font-size: 20px;
+                            background: none !important;
+                        }
+
+                        .correct-check {
+                            color: green !important;
+                            font-size: 20px;
+                            background: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

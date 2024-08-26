@@ -1,0 +1,154 @@
+.login-window {
+    .toastify-message {
+        background: #212529 !important;
+        box-shadow: 1px 1px 1px 1px rgb(255, 255, 255, 0.2);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        form {
+            // max-width: 1100px;
+            width: 100%;
+            border-left: 5px solid orange !important;
+            padding: 20px;
+
+            .input-section {
+                display: flex;
+                flex-direction: column;
+                background: none !important;
+                gap: 20px;
+
+                input:focus {
+                    background: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                    border-bottom: 1px solid #ADB5BD;
+                    border-left: 5px solid orange;
+                }
+
+                input {
+                    border: none;
+                    background: none !important;
+                    border-bottom: 1px solid #ADB5BD;
+                    transition: 0.3s;
+                    width: 100%;
+                }
+
+                .email-input {
+                    position: relative;
+                    margin-top: 20px;
+                }
+
+
+                .email-label {
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                    background: white;
+                    padding: 0 5px;
+                    transition: all 0.3s ease;
+                    pointer-events: none;
+                    color: #666;
+                    background: none;
+                }
+
+                .email-input input:focus+.email-label,
+                .email-input input:not(:placeholder-shown)+.email-label {
+                    left: -100px;
+                    opacity: 0;
+                }
+
+
+            }
+
+            .buttons {
+                .login-reset-buttons {
+                    display: flex;
+                    gap: 10px;
+
+                    button {
+                        padding: 5px 0px;
+                        border: none;
+                        border-radius: 8px;
+                    }
+
+                    .login {
+                        background: orange;
+                        width: 70%;
+                    }
+
+                    .reset {
+                        width: 30%;
+                        border: 1px solid #ADB5BD;
+                    }
+
+                    .reset {
+                        padding: 5px 0;
+                        border: 1px solid #ADB5BD;
+                        border-radius: 8px;
+                        position: relative;
+                        background-color: transparent;
+                        color: black;
+                        overflow: hidden;
+                        z-index: 1;
+                        color: white;
+                    }
+
+                    .reset::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: transparent;
+                        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                        transition: clip-path 0.3s ease, background 0.3s ease;
+                        z-index: -1;
+                    }
+
+                    .reset:hover::before {
+                        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+                        background: #495057;
+                    }
+                }
+
+                .register-section {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+
+                    .sing-up-button {
+                        padding: 5px 0;
+                        border: 1px solid #ADB5BD;
+                        border-radius: 8px;
+                        position: relative;
+                        background-color: transparent;
+                        color: black;
+                        overflow: hidden;
+                        z-index: 1;
+                        color: white;
+                        text-decoration: none;
+                    }
+
+                    .sing-up-button::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: transparent;
+                        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                        transition: clip-path 0.3s ease, background 0.3s ease;
+                        z-index: -1;
+                    }
+
+                    .sing-up-button:hover::before {
+                        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+                        background: #495057;
+                    }
+                }
+            }
+        }
+    }
+}

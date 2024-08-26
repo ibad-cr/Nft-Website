@@ -1,0 +1,17 @@
+.wishlist-components {
+    .wishlist-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+
+        .right-items {
+            display: flex;
+            gap: 20px;
+
+            button {
+                background: none;
+                border: none;
+            }
+        }
+    }
+}
