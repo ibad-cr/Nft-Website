@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import { GoBookmark } from 'react-icons/go';
-import { PiShoppingCartThin } from 'react-icons/pi';
 import { Link, useLocation } from 'react-router-dom';
 import supabase from '../../tools/config/connect';
-import { IoBookmark, IoBookmarkOutline } from 'react-icons/io5';
+import Aos from 'aos';
 
 const ShopSingleCard = ({ id, image, title, information, color, price, quantity, quality, alldata }) => {
     const location = useLocation();
-    const isShopPage = location.pathname === '/shop';
 
     const [isInWishlist, setIsInWishlist] = useState(false);
 
@@ -141,6 +138,11 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
         }
     };
 
+    // ======================AOS======================================================================
+    useEffect(() => {
+        Aos.init();
+    }, [])
+
     return (
         <div className='shop-single-card'>
             <div class="col">
@@ -156,24 +158,16 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
                     <div class="card-body">
                         <div className='price-and-shopping-buttons'>
                             <div class="product-price">$ {price}</div>
-                            {isShopPage ?
-                                <div className='market-buttons'>
+                            <div className='market-buttons'>
                                     <button className='add-to-card-button' onClick={dataSendToBasket}>
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </button>
                                     <button className='wishlist-button' onClick={() => {
-                                        dataSendToWishlist(); 
+                                        dataSendToWishlist();
                                     }}>
                                         {isInWishlist ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-regular fa-bookmark"></i>}
                                     </button>
-                                </div> :
-                                <div className='start-shopping-div'>
-                                    <Link to='/shop' className='btn'>
-                                        <i class="animation"></i>
-                                        Start shopping
-                                        <i class="animation"></i>
-                                    </Link>
-                                </div>}
+                                </div> 
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
         border-radius: 24px;
         border: 1px solid #495057;
         padding-block: 15px;
-        padding-inline: 100px;
+        padding-inline: 50px;
 
         h1 {
             border-bottom: 1px solid #495057;
@@ -490,7 +490,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 2px solid white ;
+                border: 2px solid white;
                 border-radius: 50% !important;
 
                 .fa-solid {
@@ -515,23 +515,44 @@
         background: none !important;
         position: relative;
 
+        .shop-search-box {
+            display: inline-block;
+            position: relative;
+
+            input {
+                background: #343a40;
+                border: none;
+                outline: none;
+                padding: 5px 20px;
+                border-radius: 50em;
+                width: 100%;
+            }
+
+            .search-icon {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translate(-50%, -65%);
+            }
+        }
+
         .row {
             position: relative;
             z-index: 2;
         }
 
-        .cards-gradient {
-            background: linear-gradient(to bottom right, red, orange);
-            filter: blur(5vw);
-            opacity: 0.4;
-            width: 80%;
-            height: 80%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
+        // .cards-gradient {
+        //     background: linear-gradient(to bottom right, red, orange);
+        //     filter: blur(5vw);
+        //     opacity: 0.4;
+        //     width: 80%;
+        //     height: 80%;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     z-index: 1;
+        // }
     }
 }
 

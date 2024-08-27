@@ -24,30 +24,10 @@ const Home = () => {
                 <div className="home-wrapper">
                     <div className="home-container">
                         <div className='home-elements mt-4 mb-5'>
-                            <div className='opening-part mt-4 mb-4'>
-                                <div className="right-side">
-                                    <div className="nft-image">
-                                        <div className='gradient-purple'></div>
-                                        <div className='gradient-white'></div>
-                                        <img className='image' src="../src/assets/img/samurai.png" alt="NFT Art" />
-                                    </div>
-                                </div>
 
-                                <div className='left-side'>
-                                    <p className='nft-information-text'>
-                                        NFTs are notable for their uniqueness and indivisibility.
-                                        Each NFT has distinct attributes that differentiate it from others,
-                                        making them non-fungible. This uniqueness makes NFTs particularly appealing
-                                        for collecting and trading. When someone purchases an NFT, they acquire ownership of a
-                                        unique digital item. While copies can be made and shared, the blockchain verifies ownership
-                                        and maintains a record of the item’s authenticity and ownership history.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='heroes'>
+                            <div className='heroes mb-4'>
                                 <div className="text-section">
-                                    <h4 className='text-center'>What is an NFT?</h4>
+                                    <h4 className='text-center mb-3'>What is an NFT?</h4>
                                     <p>
                                        <strong> Unique and Verified:</strong> NFTs are unique and recorded on the blockchain, which makes
                                         it difficult for them to be counterfeit or duplicated. Each NFT has its own unique

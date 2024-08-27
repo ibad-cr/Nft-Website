@@ -99,7 +99,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/home/homeSwiperJs' element={<HomeSwiperJs />}></Route>
-          <Route path='/shop' element={<Shop />}></Route>
+          <Route path='/shop/:slug' element={<Shop />}></Route>
           <Route path='/shop/shopSingleCard' element={<ShopSingleCard />}></Route>
           <Route path='/auth/login' element={<Login />}></Route>
           <Route path='/auth/register' element={<Register />}></Route>

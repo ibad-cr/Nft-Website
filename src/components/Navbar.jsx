@@ -7,6 +7,8 @@ import { useCookies } from 'react-cookie';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import supabase from '../tools/config/connect';
+import slugify from 'slugify';
+import { useParams } from 'react-router-dom';
 
 const Navbar = () => {
     const [openSearch, setOpenSearch] = useState(false);
@@ -135,6 +137,19 @@ const Navbar = () => {
     }, [cookies['cookie-user']]);
 
 
+
+    const [keyword, setKeyword] = useState('');
+    const [product, setProduct] = useState([]);
+
+    const shop = useSelector(item => item.shop)
+
+    useEffect(() => {
+        setProduct(shop)
+    }, [shop])
+
+
+    const filteredProducts = !keyword ? '' : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
+
     return (
         <div>
             <div className='wrapper-div'>
@@ -147,9 +162,7 @@ const Navbar = () => {
                         <ul className="nav-links">
                             <i className="uil uil-times navCloseBtn" onClick={() => setOpenNav(false)} style={{ background: 'none' }}></i>
                             <li onClick={() => setOpenNav(false)}><NavLink to="/">Home</NavLink></li>
-                            {/* <li onClick={() => setOpenNav(false)}><NavLink to="#">Drops</NavLink></li>
-                            <li onClick={() => setOpenNav(false)}><NavLink to="#">Explore</NavLink></li> */}
-                            <li onClick={() => setOpenNav(false)}><NavLink to="/shop">Shop</NavLink></li>
+                            <li onClick={() => setOpenNav(false)}><NavLink to="/shop/c">Shop</NavLink></li>
                         </ul>
 
                         <div className='d-flex align-items-center' style={{ background: 'none', gap: '10px' }}>
@@ -159,7 +172,8 @@ const Navbar = () => {
                                     <li className='list-group-item '>
                                         {cookies['cookie-user'] ?
                                             <div className="user-dropdown" ref={el => dropdownRefs.current[0] = el}>
-                                                <button className="user-dropdown-btn" onClick={() => toggleDropdown(0)}>
+                                                <button
+                                                    className="user-dropdown-btn" onClick={() => toggleDropdown(0)}>
                                                     <img className='user-image' src={filterUsersInformation.image}
                                                         alt="" style={{ width: '40px', objectFit: 'cover', border: 'none', background: 'none' }} />
                                                     <span style={{ background: 'none' }}><MdOutlineKeyboardArrowDown style={{ background: 'none' }} /></span>
@@ -188,7 +202,7 @@ const Navbar = () => {
                                                             </NavLink>
                                                         </li>
                                                         <li className='list-group-item mb-2'>
-                                                            <button onClick={() => { setOpenDropdownIndex(null); removeCookie('cookie-user');window.location.assign('/') }}>
+                                                            <button onClick={() => { setOpenDropdownIndex(null); removeCookie('cookie-user'); window.location.assign('/') }}>
                                                                 <CiLogout className='me-4' style={{ background: 'none', fontSize: '25px' }} />
                                                                 Log out
                                                             </button>
@@ -204,7 +218,35 @@ const Navbar = () => {
                         </div>
                         <div className="search-box" style={{ background: 'none' }}>
                             <i className="uil uil-search search-icon" style={{ background: 'none' }}></i>
-                            <input type="text" placeholder="Search here..." />
+                            <input
+                                type="text"
+                                placeholder="Search here..."
+                                value={keyword}
+                                onChange={(e) => setKeyword(e.target.value)}
+                            />
+
+                            <div className='modal-div mt-3'>
+                                {filteredProducts.length > 0 ? (
+                                    filteredProducts.map(item => (
+                                        <Link onClick={()=> setOpenSearch(false)} to={`/shop/${slugify(item.title)}`} className='d-flex align-items-center justify-content-between mb-2'
+                                            style={{ border: '1px solid #69747e', borderRadius: '12px', padding: '8px' }}>
+                                            <div key={item.id} className='search-products'>
+                                                <img src={item.image} alt="" />
+                                                <div>
+                                                    <h6 className='title'>{item.title}</h6>
+                                                    <h6 className='price'>$ {item.price}</h6>
+                                                </div>
+                                            </div>
+
+                                            <div className='angels-icon'>
+                                                <i class="fa-solid fa-angles-right"></i>
+                                            </div>
+                                        </Link>
+                                    ))
+                                ) : (
+                                    <div className='text-center' style={{ color: 'white' }}>No results found</div>
+                                )}
+                            </div>
                         </div>
                     </nav>
                 </header>

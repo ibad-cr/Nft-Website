@@ -15,83 +15,6 @@ body,
     .home-elements {
         position: relative;
 
-        .opening-part {
-            display: flex;
-            align-items: center;
-            background: none !important;
-            padding: 0px 20px 0px 20px;
-            border: 1px solid #495057;
-            border-radius: 24px;
-
-            .left-side {
-                width: 70% !important;
-                background: none !important;
-                border: 1px solid purple;
-                border-radius: 24px;
-                padding: 20px;
-
-                .nft-information-text {
-                    font-size: 13px;
-                    margin: 0;
-                    padding: 0;
-                    letter-spacing: 2px;
-                    text-align: center;
-                }
-            }
-
-            .right-side {
-                width: 30% !important;
-                background: none !important;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 10px;
-
-                .nft-image {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                img {
-                    position: relative;
-                    border: 2px solid white;
-                    border-radius: 50%;
-                    width: 200px;
-                    object-fit: cover;
-                    padding: 10px;
-                    z-index: 3;
-                }
-
-                .gradient-purple {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: purple;
-                    width: 80%;
-                    height: 80%;
-                    z-index: 1;
-                    filter: blur(5vw);
-                    border-radius: 50%;
-                    pointer-events: none;
-                }
-
-                .gradient-white {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: white;
-                    width: 60%;
-                    height: 60%;
-                    z-index: 2;
-                    filter: blur(5vw);
-                    border-radius: 50%;
-                    pointer-events: none;
-                }
-            }
-        }
-
         .cards-section {
             border: 1px solid #495057;
             border-radius: 24px;
@@ -213,15 +136,32 @@ body,
         }
 
         .heroes {
-            border: 1px solid white;
+            border: 1px solid #495057;
+            border-radius: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             overflow-x: hidden;
-            padding: 10px;
+            padding: 20px;
+            gap: 20px;
 
             .text-section {
                 width: 50%;
+
+                h4 {
+                    border: 1px solid #495057;
+                    border-radius: 24px;
+                    padding: 5px 0px;
+                }
+
+                p {
+                    font-size: 16px;
+
+                    strong {
+                        color: orange;
+                        text-decoration: underline;
+                    }
+                }
             }
 
             @keyframes slide {
@@ -235,9 +175,9 @@ body,
             }
 
             .horizontal-carousel {
-                border: 1px solid white;
-                padding: 20px;
-                margin: 10px;
+                border: 1px solid #495057;
+                border-radius: 24px;
+                padding: 10px;
                 width: 50%;
                 overflow-x: hidden;
                 display: flex;
@@ -248,14 +188,17 @@ body,
                 .images {
                     overflow: hidden;
                     white-space: nowrap;
+                    border: 1px solid #495057;
+                    border-radius: 12px;
+                    padding: 6px;
 
                     .image-slide {
                         display: inline-block;
                         animation: 15s slide infinite linear;
 
                         img {
-                            width: 125px;
-                            height: 125px;
+                            width: 100px;
+                            height: 100px;
                             object-fit: cover;
                             margin: 0 10px;
                             border-radius: 12px;
@@ -276,6 +219,9 @@ body,
                 .images-two {
                     overflow: hidden;
                     white-space: nowrap;
+                    border: 1px solid #495057;
+                    border-radius: 12px;
+                    padding: 6px;
 
                     .image-slide-two {
                         display: inline-block;
@@ -289,6 +235,39 @@ body,
                             border-radius: 12px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .heroes {
+        display: flex;
+        flex-direction: column;
+
+        .text-section {
+            width: 100% !important;
+            border: 1px solid #495057;
+            border-radius: 24px;
+            padding: 10px !important;
+        }
+
+        .horizontal-carousel {
+            width: 100% !important;
+
+            .images,
+            .images-two {
+                border-radius: 50em !important;
+                padding: 0 !important;
+            }
+
+            .image-slide,
+            .image-slide-two {
+                img {
+                    width: 80px !important;
+                    height: 80px !important;
+                    border-radius: 50% !important;
                 }
             }
         }

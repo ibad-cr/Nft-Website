@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import ShopSingleCard from '../components/ShopComponents/ShopSingleCard';
-import { RxCaretSort } from 'react-icons/rx';
-import Wishlist from './Wishlist';
+import Aos from 'aos';
 
 const Shop = () => {
     const shop = useSelector(state => state.shop);
@@ -75,6 +74,20 @@ const Shop = () => {
         const highPrice = [...filterShop].sort((a, b) => b.price - a.price)
         setFilterShop(highPrice);
     }
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
+
+    const [keyword, setKeyword] = useState('');
+    const [product, setProduct] = useState([]);
+
+    useEffect(() => {
+        setProduct(shop)
+    }, [shop])
+
+
+    const filteredProducts = !keyword ? product : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
 
     return (
         <div>
@@ -207,22 +220,40 @@ const Shop = () => {
                 </div>
 
                 <div className='cards-section mt-4'>
+                    <div className='shop-search-box'>
+                        <div className='search-icon-div'>
+                            <i className="uil uil-search search-icon" style={{ background: 'none' }}></i>
+                        </div>
+
+                        <input
+                            type="text"
+                            className='mb-4 mt-3'
+                            value={keyword}
+                            onChange={(e) => setKeyword(e.target.value)}
+                            placeholder='Search product...' />
+                    </div>
+
                     <div className='cards-gradient'></div>
                     <div className='row row-cols-2 row-cols-xl-4 row-cols-lg-3 g-4' style={{ background: 'none' }}>
-                        {filterShop.map((item, index) => (
-                            <div className='' key={index} style={{ background: 'none' }}>
-                                <ShopSingleCard
-                                    image={item.image}
-                                    title={item.title}
-                                    information={item.information}
-                                    category={item.category}
-                                    price={item.price}
-                                    quantity={item.quantity}
-                                    alldata={item}
-                                />
-                            </div>
-                        ))}
+                        {filteredProducts.length > 0 ? (
+                            filteredProducts.map((item, index) => (
+                                <div className='' key={index} style={{ background: 'none' }} data-aos="fade-up">
+                                    <ShopSingleCard
+                                        image={item.image}
+                                        title={item.title}
+                                        information={item.information}
+                                        category={item.category}
+                                        price={item.price}
+                                        quantity={item.quantity}
+                                        alldata={item}
+                                    />
+                                </div>
+                            ))
+                        ) : (
+                            <div className='text-center' style={{ color: 'white' }}>No products found</div>
+                        )}
                     </div>
+
                 </div>
             </div >
         </div>

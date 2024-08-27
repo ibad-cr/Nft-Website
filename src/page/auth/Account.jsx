@@ -8,6 +8,7 @@ import { FontsContext } from '../../context/Fonts';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { FiEdit2 } from 'react-icons/fi';
 import supabase from '../../tools/config/connect';
+import { motion } from 'framer-motion';
 
 const Account = () => {
     const [cookies, setCookie, removeCookie] = useCookies(['cookie-user', 'admin-token']);
@@ -95,9 +96,17 @@ const Account = () => {
                                         }
                                     </div>
                                     <div className="card-body">
-                                        <div className='users-logo text-center'>
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.1 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            transition={{
+                                                duration: 0.8,
+                                                delay: 0.5,
+                                                ease: [0, 0.71, 0.2, 1.01]
+                                            }}
+                                            className='users-logo text-center'>
                                             <img src={edit ? 'https://as1.ftcdn.net/v2/jpg/02/89/49/22/1000_F_289492257_augSIlCtit7AQhCZQwYPF1X1XgtwwJkN.jpg' : filterUsersInformation.image} alt="User" />
-                                        </div>
+                                        </motion.div>
                                         <div className='user-form-information mt-3'>
                                             {edit ?
                                                 <form>

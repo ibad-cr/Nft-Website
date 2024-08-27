@@ -3,7 +3,6 @@
     justify-content: center;
     position: relative;
     overflow: visible;
-    background: 212529;
     padding-bottom: 50px;
 }
 
@@ -33,7 +32,7 @@ header {
         color: #fff;
         text-decoration: none;
     }
-    
+
     .nav .nav-logo {
         background: none;
 
@@ -73,13 +72,54 @@ header {
 
     .nav .search-box {
         position: absolute;
-        right: 420px;
+        right: 450px;
         height: 35px;
         max-width: 555px;
         width: 100%;
         opacity: 0;
         pointer-events: none;
         transition: all 0.2s linear;
+    }
+
+    .modal-div {
+        width: 100%;
+        border-radius: 6px;
+        overflow-y: scroll;
+        height: max-content;
+        max-height: 50vh;
+        position: relative;
+        z-index: 999;
+        padding: 20px;
+        background: #343a40;
+
+        .search-products {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 5px 0px;
+            }
+
+            .price {
+                font-size: 13px;
+            }
+        }
+
+        .angels-icon {
+            cursor: pointer;
+
+            .fa-solid {
+                border: 1px solid #69747e;
+                border-radius: 50%;
+                padding: 6px;
+                font-size: 14px;
+            }
+        }
     }
 
     .nav.openSearch .search-box {
