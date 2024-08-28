@@ -39,7 +39,7 @@ const Wishlist = () => {
 
     return (
         <div className='wishlist-components mt-4'>  
-            <div className='container'>
+            <div className='wishlist-container'>
                 <div className='wishlist-header mb-4'>
                     <div><i class="fa-solid fa-bookmark"></i></div>
 

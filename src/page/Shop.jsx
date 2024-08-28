@@ -75,10 +75,6 @@ const Shop = () => {
         setFilterShop(highPrice);
     }
 
-    useEffect(() => {
-        Aos.init();
-    }, [])
-
     const [keyword, setKeyword] = useState('');
     const [product, setProduct] = useState([]);
 
@@ -89,9 +85,13 @@ const Shop = () => {
 
     const filteredProducts = !keyword ? product : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
 
+    useEffect(() => {
+        Aos.init();
+    }, [])
+
     return (
-        <div>
-            <div className="shop-container container">
+        <div className='shop-wrapper'>
+            <div className="shop-container">
                 <div className='shop-opening-part mb-4'>
                     <h1 className='text-center' style={{ margin: '0', padding: '0' }}>Shop</h1>
                     <div className='text-and-shop mt-3'>
@@ -219,7 +219,7 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className='cards-section mt-4'>
+                <div className='shop-cards-section mt-4'>
                     <div className='shop-search-box'>
                         <div className='search-icon-div'>
                             <i className="uil uil-search search-icon" style={{ background: 'none' }}></i>
@@ -237,7 +237,7 @@ const Shop = () => {
                     <div className='row row-cols-2 row-cols-xl-4 row-cols-lg-3 g-4' style={{ background: 'none' }}>
                         {filteredProducts.length > 0 ? (
                             filteredProducts.map((item, index) => (
-                                <div className='' key={index} style={{ background: 'none' }} data-aos="fade-up">
+                                <div className='' key={index} style={{ background: 'none' }}>
                                     <ShopSingleCard
                                         image={item.image}
                                         title={item.title}
@@ -250,7 +250,7 @@ const Shop = () => {
                                 </div>
                             ))
                         ) : (
-                            <div className='text-center' style={{ color: 'white' }}>No products found</div>
+                            <h3 className='text-center' style={{ color: 'white', width: '100%' }}>No products found</h3>
                         )}
                     </div>
 

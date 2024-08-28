@@ -81,8 +81,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className='cards-section'>
-                                <h3 className='text-center my-3'>Recommed products</h3>
+                            <div className='home-cards-section'>
+                                <h3 className='text-center mt-3'>Recommed products</h3>
                                 <HomeSwiperJs />
                                 <div className='d-flex justify-content-center my-4'>
                                     <Link to='/shop' className='animated-button'>

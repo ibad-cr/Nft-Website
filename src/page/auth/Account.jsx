@@ -5,8 +5,6 @@ import { useParams } from 'react-router-dom';
 import { ModeContext } from '../../context/Mode';
 import { CiStar } from 'react-icons/ci';
 import { FontsContext } from '../../context/Fonts';
-import { IoMdArrowDropdown } from 'react-icons/io';
-import { FiEdit2 } from 'react-icons/fi';
 import supabase from '../../tools/config/connect';
 import { motion } from 'framer-motion';
 
@@ -76,11 +74,11 @@ const Account = () => {
     };
 
     return (
-        <div>
+        <div className='account-wrapper'>
             <div className='account-elements'>
-                <div className='container'>
+                <div className=''>
                     <div className="row">
-                        <div className="col-12 col-sm-12 col-md-4">
+                        <div className="col-12 col-sm-12 col-md-4 mb-3">
                             <div className="card">
                                 <div className="account-left-side">
                                     <div className='edit-button-div mt-3 me-3'>
@@ -105,7 +103,8 @@ const Account = () => {
                                                 ease: [0, 0.71, 0.2, 1.01]
                                             }}
                                             className='users-logo text-center'>
-                                            <img src={edit ? 'https://as1.ftcdn.net/v2/jpg/02/89/49/22/1000_F_289492257_augSIlCtit7AQhCZQwYPF1X1XgtwwJkN.jpg' : filterUsersInformation.image} alt="User" />
+
+                                            <img className='mb-3' src={edit ? 'https://as1.ftcdn.net/v2/jpg/02/89/49/22/1000_F_289492257_augSIlCtit7AQhCZQwYPF1X1XgtwwJkN.jpg' : filterUsersInformation.image} alt="User" />
                                         </motion.div>
                                         <div className='user-form-information mt-3'>
                                             {edit ?
@@ -117,10 +116,10 @@ const Account = () => {
                                                     <input type="password" placeholder='**********' className='mb-2' disabled />
                                                 </form> :
                                                 <form>
-                                                    <input type="text" placeholder={filterUsersInformation.fullname || 'Fullname'} className='mb-2' disabled />
-                                                    <input type="text" placeholder={filterUsersInformation.lastname || 'Lastname'} className='mb-2' disabled />
-                                                    <input type="text" placeholder={filterUsersInformation.email || 'Email'} className='mb-2' disabled />
-                                                    <input type="password" placeholder='**********' className='mb-2' disabled />
+                                                    <input type="text" placeholder={filterUsersInformation.fullname || 'Fullname'} className='' disabled />
+                                                    <input type="text" placeholder={filterUsersInformation.lastname || 'Lastname'} className='my-4' disabled />
+                                                    <input type="text" placeholder={filterUsersInformation.email || 'Email'} className='' disabled />
+                                                    <input type="password" placeholder='**********' className='my-4' disabled />
                                                 </form>}
                                             <div>
                                                 <div className='order-div'>

@@ -148,7 +148,8 @@ const Navbar = () => {
     }, [shop])
 
 
-    const filteredProducts = !keyword ? '' : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
+    const filteredProducts = !keyword ? product : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
+
 
     return (
         <div>
@@ -227,9 +228,14 @@ const Navbar = () => {
 
                             <div className='modal-div mt-3'>
                                 {filteredProducts.length > 0 ? (
-                                    filteredProducts.map(item => (
-                                        <Link onClick={()=> setOpenSearch(false)} to={`/shop/${slugify(item.title)}`} className='d-flex align-items-center justify-content-between mb-2'
-                                            style={{ border: '1px solid #69747e', borderRadius: '12px', padding: '8px' }}>
+                                    filteredProducts.map((item, index) => (
+                                        <Link
+                                            key={item.id}
+                                            onClick={() => setOpenSearch(false)}
+                                            to={`/shop/${slugify(item.title)}`}
+                                            className='d-flex align-items-center justify-content-between mb-2'
+                                            style={{ '--clr': 'red', border: '1px solid #69747e', borderRadius: '12px', padding: '8px' }}
+                                        >
                                             <div key={item.id} className='search-products'>
                                                 <img src={item.image} alt="" />
                                                 <div>

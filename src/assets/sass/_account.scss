@@ -1,7 +1,12 @@
-.account-elements {
-    padding-top: 50px;
+.account-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .container {
+    .account-elements {
+        padding-top: 50px;
+        width: 90%;
+
         .row {
             background: none;
 
@@ -69,11 +74,14 @@
                         background: none;
 
                         img {
-                            width: 200px !important;
-                            height: 200px !important;
+                            width: 250px !important;
+                            height: 250px !important;
                             object-fit: cover;
                             border-radius: 50%;
                             background: none;
+                            position: relative;
+                            top: 50%;
+                            z-index: 2;
                         }
                     }
 
@@ -96,6 +104,7 @@
                         .order-div {
                             border: 1px solid red;
                             padding: 5px 10px 5px 10px;
+                            border-radius: 12px 12px 0px 0px;
 
                             .order-button-div {
                                 display: flex;

@@ -1,19 +1,27 @@
 .basket-components {
     height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .basket-header {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid white;
+    .basket-container {
+        width: 90%;
 
-        .right-items {
+        .basket-header {
             display: flex;
-            gap: 20px;
+            justify-content: space-between;
+            border-bottom: 1px solid white;
 
-            button {
-                background: none;
-                border: none;
+            .right-items {
+                display: flex;
+                gap: 20px;
+
+                button {
+                    background: none;
+                    border: none;
+                }
             }
         }
     }
+
 }

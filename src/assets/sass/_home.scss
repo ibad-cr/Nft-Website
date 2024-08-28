@@ -9,15 +9,19 @@ body,
     justify-content: center;
 
     .home-container {
-        width: 80%;
+        width: 90%;
     }
 
     .home-elements {
         position: relative;
 
-        .cards-section {
+        .home-cards-section {
             border: 1px solid #495057;
             border-radius: 24px;
+        }
+
+        h3 {
+            border-bottom: 1px solid #495057;
         }
 
         .decoration {
@@ -142,8 +146,8 @@ body,
             justify-content: space-between;
             align-items: center;
             overflow-x: hidden;
-            padding: 20px;
-            gap: 20px;
+            padding: 30px;
+            gap: 25px;
 
             .text-section {
                 width: 50%;
@@ -183,7 +187,6 @@ body,
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-
 
                 .images {
                     overflow: hidden;

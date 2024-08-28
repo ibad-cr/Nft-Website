@@ -108,7 +108,7 @@ const App = () => {
           <Route path='/wishlist' element={<Wishlist />}></Route>
           <Route path='/wishlist/wishlistSingleCard' element={<WishlistSingleCard />}></Route>
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   )

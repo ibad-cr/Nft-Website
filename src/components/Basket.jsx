@@ -48,7 +48,7 @@ const Basket = () => {
 
   return (
     <div className='basket-components mt-5'>
-      <div className='container'>
+      <div className='basket-container'>
         <div className='basket-header mb-4'>
           <div className='total-price'>Total Price: ${(totalPrice).toFixed(2)}</div>
  

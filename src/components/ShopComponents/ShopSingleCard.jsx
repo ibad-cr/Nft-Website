@@ -159,15 +159,24 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
                         <div className='price-and-shopping-buttons'>
                             <div class="product-price">$ {price}</div>
                             <div className='market-buttons'>
+                                {!cookies['cookie-user'] ?
+                                    <Link to='/auth/login' className='add-to-card-button me-2'>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </Link>
+                                    :
                                     <button className='add-to-card-button' onClick={dataSendToBasket}>
                                         <i class="fa-solid fa-cart-shopping"></i>
-                                    </button>
-                                    <button className='wishlist-button' onClick={() => {
-                                        dataSendToWishlist();
-                                    }}>
+                                    </button>}
+
+                                {!cookies['cookie-user'] ?
+                                    <Link to='/auth/login' className='wishlist-button'>
                                         {isInWishlist ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-regular fa-bookmark"></i>}
-                                    </button>
-                                </div> 
+                                    </Link>
+                                    :
+                                    <button className='wishlist-button' onClick={() => { dataSendToWishlist() }}>
+                                        {isInWishlist ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-regular fa-bookmark"></i>}
+                                    </button>}
+                            </div>
                         </div>
                     </div>
                 </div>
