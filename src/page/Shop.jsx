@@ -107,7 +107,7 @@ const Shop = () => {
                                 <div className='animation-circle-one'></div>
                                 <div className='animation-circle-two'></div>
                             </div>
-                            <img src="../src/assets/gif/gori-samurai-nft_e0wYcoPdeLhBKun8.webp" alt="Samurai NFT" />
+                            <img src="https://nftcalendar.io/storage/uploads/2023/01/07/gori-samurai-nft_e0wYcoPdeLhBKun8.gif" alt="Samurai NFT" />
                         </div>
 
                     </div>
