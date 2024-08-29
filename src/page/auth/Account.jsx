@@ -82,7 +82,6 @@ const Account = () => {
 
         if (savedFavorites) {
             setFavorite(JSON.parse(savedFavorites));
-            console.log("Stored Favorites:", JSON.parse(savedFavorites));
         }
     }, [setFavorite]);
 
@@ -90,7 +89,6 @@ const Account = () => {
         const updatedFavorites = { ...favorite };
         updatedFavorites[fontName] = updatedFavorites[fontName] === "star" ? "fill-star" : "star";
         setFavorite(updatedFavorites);
-        console.log("Updated Favorites:", updatedFavorites);
         localStorage.setItem("favorite", JSON.stringify(updatedFavorites));
     };
 
