@@ -57,11 +57,15 @@
     }
 
     .shop-container {
+        .shop-cards-section {
+            border: 2px solid white !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid white;
+            border: 2px solid white !important;
 
             h1 {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid white !important;
             }
 
             .image-animation-border {
@@ -109,9 +113,23 @@
 
     .home-wrapper {
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid white !important;
         }
 
@@ -253,7 +271,7 @@
     }
 
     .account-elements {
-        .container .row .card {
+        .container .row .col-4 .card {
             border: 2px solid white !important;
         }
 
@@ -288,11 +306,15 @@
     }
 
     .shop-container {
+        .shop-cards-section {
+            border: 2px solid white !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid white;
+            border: 2px solid white !important;
 
             h1 {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid white !important;
             }
 
             .image-animation-border {
@@ -340,9 +362,23 @@
 
     .home-wrapper {
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid white !important;
         }
 
@@ -354,7 +390,7 @@
             }
 
             .circle {
-                background-color: black !important;
+                background-color: purple !important;
             }
 
             &:hover {
@@ -519,11 +555,15 @@
     }
 
     .shop-container {
+        .shop-cards-section {
+            border: 2px solid white !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid white;
+            border: 2px solid white !important;
 
             h1 {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid white !important;
             }
 
             .image-animation-border {
@@ -571,9 +611,23 @@
 
     .home-wrapper {
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid white !important;
         }
 
@@ -585,7 +639,7 @@
             }
 
             .circle {
-                background-color: black !important;
+                background-color: purple !important;
             }
 
             &:hover {
@@ -779,11 +833,15 @@
     }
 
     .shop-container {
+        .shop-cards-section {
+            border: 2px solid black !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid black;
+            border: 2px solid black !important;
 
             h1 {
-                border-bottom: 1px solid black !important;
+                border-bottom: 1px solid black !important !important;
             }
 
             .image-animation-border {
@@ -863,9 +921,23 @@
 
     .home-wrapper {
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: black !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid black !important;
         }
 
@@ -1142,11 +1214,15 @@
     }
 
     .shop-container {
+        .shop-cards-section {
+            border: 2px solid white !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid white;
+            border: 2px solid white !important;
 
             h1 {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid white !important;
             }
 
             .image-animation-border {
@@ -1194,9 +1270,23 @@
 
     .home-wrapper {
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid white !important;
         }
 
@@ -1208,7 +1298,7 @@
             }
 
             .circle {
-                background-color: black !important;
+                background-color: purple !important;
             }
 
             &:hover {
@@ -1373,11 +1463,15 @@
     }
 
     .shop-container {
+        .shop-cards-section {
+            border: 2px solid white !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid white;
+            border: 2px solid white !important;
 
             h1 {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid white !important;
             }
 
             .image-animation-border {
@@ -1425,9 +1519,23 @@
 
     .home-wrapper {
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid white !important;
         }
 
@@ -1439,7 +1547,7 @@
             }
 
             .circle {
-                background-color: black !important;
+                background-color: purple !important;
             }
 
             &:hover {
@@ -1564,15 +1672,6 @@
     background: yellow;
     transition: 0.4s;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: purple !important;
-    }
-
     .row .card {
         border: 2px solid purple !important;
     }
@@ -1631,8 +1730,23 @@
     }
 
     .shop-container {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: purple !important;
+        }
+
+        .shop-cards-section {
+            border: 2px solid purple !important;
+        }
+
         .shop-opening-part {
-            border: 2px solid black;
+            border: 2px solid purple !important;
 
             h1 {
                 border-bottom: 1px solid purple !important;
@@ -1714,13 +1828,33 @@
     }
 
     .home-wrapper {
+
         .nft-information-text {
             color: purple !important;
         }
 
-        .opening-part,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: purple !important;
+        }
+
+        strong {
+            color: black !important;
+        }
+
+        .heroes,
         .left-side,
-        .cards-section {
+        .cards-section,
+        .horizontal-carousel,
+        .images,
+        .images-two,
+        .home-cards-section,
+        h4 {
             border: 2px solid purple !important;
         }
 
