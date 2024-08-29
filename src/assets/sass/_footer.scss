@@ -30,12 +30,14 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
     .footer-wrapper {
         .footer-container {
+            width: 97% !important;
+
             footer {
                 .footer-date {
-                    font-size: 12px !important;
+                    font-size: 11px !important;
                 }
             }
 

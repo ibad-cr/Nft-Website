@@ -320,7 +320,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 400px) {
 
         .nav .navOpenBtn,
         .nav .navCloseBtn {
@@ -339,9 +339,9 @@ header {
             top: 0;
             left: -100%;
             height: 100%;
-            max-width: 80%;
+            max-width: 90%;
             width: 100%;
-            padding-top: 400px;
+            padding-top: 350px;
             row-gap: 30px;
             flex-direction: column;
             background: #343a40;
@@ -375,6 +375,38 @@ header {
             right: 50%;
             transform: translateX(50%);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-div {
+            padding: 10px !important;
+            .search-products {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 5px 0px;
+                }
+
+                .price, .title {
+                    font-size: 12px;
+                }
+            }
+
+            .angels-icon {
+                cursor: pointer;
+
+                .fa-solid {
+                    border: 1px solid #69747e;
+                    border-radius: 50%;
+                    padding: 6px;
+                    font-size: 14px;
+                }
+            }
         }
     }
 }

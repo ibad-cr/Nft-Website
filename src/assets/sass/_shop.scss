@@ -561,7 +561,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
     .shop-container {
         .shop-opening-part {
             border-radius: 12px;
@@ -573,14 +573,15 @@
                     max-width: 67%;
                     font-size: 9px;
                     text-align: center;
+                    font-size: 7px !important;
                 }
 
                 .image-animation-border {
                     .border-and-circle {
 
                         .animation-border {
-                            width: 140px !important;
-                            height: 140px !important;
+                            width: 100px !important;
+                            height: 100px !important;
                             border: 1px solid orange;
                         }
 
@@ -588,39 +589,49 @@
                             width: 15px !important;
                             height: 15px !important;
                             border: 1px solid orange;
-                            right: 61px !important;
+                            right: 41px !important;
                         }
 
                         .animation-circle-two {
                             width: 15px !important;
                             height: 15px !important;
                             border: 1px solid orange;
-                            bottom: 61px !important;
+                            bottom: 41px !important;
                         }
                     }
                 }
 
                 img {
-                    max-width: 120px !important;
+                    width: 80px !important;
                 }
             }
         }
 
         .dropdown-button-list {
+            .dropdown-btn::after {
+                top: -5px !important;
+
+            }
+
             .all-button-list {
                 display: flex;
-                gap: 20px !important;
+                gap: 15px !important;
                 padding: 0;
                 margin: 0;
 
                 .dropdown-btn {
-                    width: 7em !important;
+                    width: 6em !important;
+                    font-size: 12px !important;
                 }
             }
-        }
 
-        .cards-section {
-            border-radius: 12px;
+            .dropdown-content {
+
+                .price-list,
+                .color-list {
+                    width: 130% !important;
+                }
+            }
         }
     }
 }

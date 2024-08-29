@@ -234,7 +234,7 @@ const Shop = () => {
                     </div>
 
                     <div className='cards-gradient'></div>
-                    <div className='row row-cols-2 row-cols-xl-4 row-cols-lg-3 g-4' style={{ background: 'none' }}>
+                    <div className='row row-cols-1 row-cols-xl-4 row-cols-lg-3 g-4' style={{ background: 'none' }}>
                         {filteredProducts.length > 0 ? (
                             filteredProducts.map((item, index) => (
                                 <div className='' key={index} style={{ background: 'none' }}>

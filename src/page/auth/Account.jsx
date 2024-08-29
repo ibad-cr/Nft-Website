@@ -78,18 +78,20 @@ const Account = () => {
     const [favorite, setFavorite] = useContext(FavoriteFontsContext);
 
     useEffect(() => {
-        const savedFavorites = localStorage.getItem('favorite');
+        const savedFavorites = localStorage.getItem("favorite");
 
         if (savedFavorites) {
             setFavorite(JSON.parse(savedFavorites));
+            console.log("Stored Favorites:", JSON.parse(savedFavorites));
         }
     }, [setFavorite]);
 
     const handleClickFavoriteFonts = (fontName) => {
         const updatedFavorites = { ...favorite };
-        updatedFavorites[fontName] = updatedFavorites[fontName] === 'star' ? 'fill-star' : 'star';
+        updatedFavorites[fontName] = updatedFavorites[fontName] === "star" ? "fill-star" : "star";
         setFavorite(updatedFavorites);
-        localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
+        console.log("Updated Favorites:", updatedFavorites);
+        localStorage.setItem("favorite", JSON.stringify(updatedFavorites));
     };
 
     return (
@@ -195,76 +197,76 @@ const Account = () => {
                                             <h4 className='text-center mt-4'>Change Font Family</h4>
                                             <div className='fonts-config-website mt-4'>
                                                 <ul>
-                                                    <li className='list-group-item'>
-                                                        <button className='zen-dots' onClick={() => handleClickFonts('zen-dots')}>Default (zen dots)</button>
+                                                    <li className="list-group-item">
+                                                        <button className="zen-dots" onClick={() => handleClickFonts('zen-dots')}>Default (zen dots)</button>
                                                         <span onClick={() => handleClickFavoriteFonts('zen-dots')}>
-                                                            {favorite['zen-dots'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["zen-dots"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='koulen-font' onClick={() => handleClickFonts('koulen-font')}>Koulen</button>
+                                                    <li className="list-group-item">
+                                                        <button className="koulen-font" onClick={() => handleClickFonts('koulen-font')}>Koulen</button>
                                                         <span onClick={() => handleClickFavoriteFonts('koulen-font')}>
-                                                            {favorite['koulen-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["koulen-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='bungee-font' onClick={() => handleClickFonts('bungee-font')}>Bungee</button>
+                                                    <li className="list-group-item">
+                                                        <button className="bungee-font" onClick={() => handleClickFonts('bungee-font')}>Bungee</button>
                                                         <span onClick={() => handleClickFavoriteFonts('bungee-font')}>
-                                                            {favorite['bungee-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["bungee-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='foldit-font' onClick={() => handleClickFonts('foldit-font')}>Foldit</button>
+                                                    <li className="list-group-item">
+                                                        <button className="foldit-font" onClick={() => handleClickFonts('foldit-font')}>Foldit</button>
                                                         <span onClick={() => handleClickFavoriteFonts('foldit-font')}>
-                                                            {favorite['foldit-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["foldit-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='chakra-font' onClick={() => handleClickFonts('chakra-font')}>Chakra</button>
+                                                    <li className="list-group-item">
+                                                        <button className="chakra-font" onClick={() => handleClickFonts('chakra-font')}>Chakra</button>
                                                         <span onClick={() => handleClickFavoriteFonts('chakra-font')}>
-                                                            {favorite['chakra-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["chakra-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='righteous-font' onClick={() => handleClickFonts('righteous-font')}>Righteous</button>
+                                                    <li className="list-group-item">
+                                                        <button className="righteous-font" onClick={() => handleClickFonts('righteous-font')}>Righteous</button>
                                                         <span onClick={() => handleClickFavoriteFonts('righteous-font')}>
-                                                            {favorite['righteous-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["righteous-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='audiowide-font' onClick={() => handleClickFonts('audiowide-font')}>Audiowide</button>
+                                                    <li className="list-group-item">
+                                                        <button className="audiowide-font" onClick={() => handleClickFonts('audiowide-font')}>Audiowide</button>
                                                         <span onClick={() => handleClickFavoriteFonts('audiowide-font')}>
-                                                            {favorite['audiowide-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["audiowide-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='slackey-font' onClick={() => handleClickFonts('slackey-font')}>Slackey</button>
+                                                    <li className="list-group-item">
+                                                        <button className="slackey-font" onClick={() => handleClickFonts('slackey-font')}>Slackey</button>
                                                         <span onClick={() => handleClickFavoriteFonts('slackey-font')}>
-                                                            {favorite['slackey-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["slackey-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='gruppo-font' onClick={() => handleClickFonts('gruppo-font')}>Gruppo</button>
+                                                    <li className="list-group-item">
+                                                        <button className="gruppo-font" onClick={() => handleClickFonts('gruppo-font')}>Gruppo</button>
                                                         <span onClick={() => handleClickFavoriteFonts('gruppo-font')}>
-                                                            {favorite['gruppo-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["gruppo-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='novaRound-font' onClick={() => handleClickFonts('novaRound-font')}>Nova Round</button>
+                                                    <li className="list-group-item">
+                                                        <button className="novaRound-font" onClick={() => handleClickFonts('novaRound-font')}>Nova Round</button>
                                                         <span onClick={() => handleClickFavoriteFonts('novaRound-font')}>
-                                                            {favorite['novaRound-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["novaRound-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='akaya-font' onClick={() => handleClickFonts('akaya-font')}>Akaya Telivigala</button>
+                                                    <li className="list-group-item">
+                                                        <button className="akaya-font" onClick={() => handleClickFonts('akaya-font')}>Akaya Telivigala</button>
                                                         <span onClick={() => handleClickFavoriteFonts('akaya-font')}>
-                                                            {favorite['akaya-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["akaya-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
-                                                    <li className='list-group-item'>
-                                                        <button className='rubikWet-font' onClick={() => handleClickFonts('rubikWet-font')}>Rubik Wet Paint</button>
+                                                    <li className="list-group-item">
+                                                        <button className="rubikWet-font" onClick={() => handleClickFonts('rubikWet-font')}>Rubik Wet Paint</button>
                                                         <span onClick={() => handleClickFavoriteFonts('rubikWet-font')}>
-                                                            {favorite['rubikWet-font'] === 'fill-star' ? <TiStarFullOutline className='fill-star' /> : <CiStar className='star' />}
+                                                            {favorite["rubikWet-font"] === "fill-star" ? <TiStarFullOutline className="fill-star" /> : <CiStar className="star" />}
                                                         </span>
                                                     </li>
                                                 </ul>

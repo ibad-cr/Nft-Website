@@ -25,6 +25,23 @@
     }
 }
 
+@media (max-width: 400px) {
+    .basket-header {
+
+        .right-items {
+            display: flex;
+            flex-direction: column-reverse;
+            display: flex;
+            gap: 5px !important;
+
+            button {
+                background: none;
+                border: none;
+            }
+        }
+    }
+}
+
 @media (max-width: 769px) {
     .basket-components {
         .basket-container {

@@ -5,7 +5,7 @@ const currentDate = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <div className='footer-wrapper'>
+    <div className='footer-wrapper mt-5'>
       <div className="footer-container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
           <p class="col-md-4 mb-0 footer-date">© {currentDate} Company, Inc</p>

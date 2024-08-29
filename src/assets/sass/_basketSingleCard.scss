@@ -126,72 +126,74 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
     .basket-single-card {
 
         .card {
+            .product-count {
+                padding: 3px 6px 0px 6px;
+                font-size: 9px;
+            }
+
             .products-information {
                 align-items: center;
+                gap: 0px;
 
                 .left-side {
+
+                    .product-name {
+
+                        h5 {
+                            font-size: 11px !important;
+                            color: rgb(204, 177, 168);
+                        }
+                    }
 
                     .product-text {
                         margin: 0 !important;
                         padding: 0 !important;
 
                         h6 {
-                            font-size: 11px;
-                        }
-                    }
-
-                    .product-name {
-
-                        h5 {
-                            font-size: 13px;
-                            color: orangered;
+                            font-size: 9px !important;
                         }
                     }
 
                     .counter-section {
                         .counter-text {
-                            font-size: 13px;
+                            font-size: 9px;
                         }
 
                         ul {
-
                             li {
                                 button {
-                                    width: 20px;
-                                    height: 20px;
+                                    width: 15px;
+                                    height: 15px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                 }
 
                                 .quantity {
-                                    font-size: 13px;
+                                    font-size: 9px;
                                 }
                             }
                         }
 
                         .product-price {
                             padding-top: 5px;
+                            font-size: 9px;
                         }
                     }
                 }
 
                 .right-side {
-                    border: 1px solid white;
-                    border-top: none;
-                    border-bottom: none;
-                    border-radius: 50%;
-                    border-right: none;
-                    padding: 20px;
+                    border: none !important;
+                    padding: 10px !important;
 
                     .product-image {
-                        width: 150px;
-                        height: 150px;
-                        border-radius: 50%;
+                        width: 100px !important;
+                        height: 100px !important;
+                        border-radius: 50% !important;
                         position: relative;
 
                         .img {
@@ -205,28 +207,9 @@
                     }
 
                     .product-image::before {
-                        content: '';
-                        position: absolute;
-                        width: 150px;
-                        height: 150px;
-                        border-radius: 50%;
-                        background: red;
-                        z-index: 1;
-                        animation: animate 2s linear infinite;
-                        transition: transform 0.5s ease;
-                        transform: scale(1.05);
-                    }
-
-                    @keyframes animate {
-                        50% {
-                            filter: hue-rotate(355deg);
-                        }
-                    }
-
-                    .product-image:hover::before {
-                        transform: scale(1.1);
-                        transition: transform 0.5s ease;
-
+                        width: 100px !important;
+                        height: 100px !important;
+                        border-radius: 50% !important;
                     }
                 }
             }
