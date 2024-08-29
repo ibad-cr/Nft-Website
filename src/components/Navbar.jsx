@@ -150,6 +150,7 @@ const Navbar = () => {
 
     const filteredProducts = !keyword ? product : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
 
+    const { token } = useParams();
 
     return (
         <div>
