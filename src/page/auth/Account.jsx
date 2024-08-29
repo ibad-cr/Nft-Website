@@ -12,24 +12,20 @@ import { TiStarFullOutline } from 'react-icons/ti';
 
 const Account = () => {
     const [cookies, setCookie, removeCookie] = useCookies(['cookie-user', 'admin-token']);
-    const { token } = useParams();
     const user = useSelector(state => state.user);
-    const [filterUsers, setFilterUsers] = useState([]);
+
     const [mode, setMode] = useContext(ModeContext);
     const [fonts, setFonts] = useContext(FontsContext);
     const [order, setOrder] = useState(false);
     const [edit, setEdit] = useState(false);
+    const { token } = useParams();
 
     const imageLink = useRef();
     const fullname = useRef();
     const lastname = useRef();
     const email = useRef();
 
-    useEffect(() => {
-        setFilterUsers(user);
-    }, [user]);
-
-    const filterUsersInformation = filterUsers.find(item => item.user_token === token) || {};
+    const filterUsersInformation = user.length == 0 ? '' : user.find(item => item.user_token === token);
 
     const handleClick = (newMode) => {
         const newClass = mode === 'bodyBgColor' ? newMode : 'bodyBgColor';
