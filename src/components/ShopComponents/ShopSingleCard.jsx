@@ -3,6 +3,7 @@ import { useCookies } from 'react-cookie';
 import { Link, useLocation } from 'react-router-dom';
 import supabase from '../../tools/config/connect';
 import Aos from 'aos';
+import Swal from 'sweetalert2';
 
 const ShopSingleCard = ({ id, image, title, information, color, price, quantity, quality, alldata }) => {
     const location = useLocation();
@@ -21,12 +22,18 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
 
             if (error) {
                 console.log(error);
+                Swal.fire('Error', 'Error adding to basket.', 'error');
             } else {
                 if (data.length === 0) {
                     const { error } = await supabase.from('Basket').insert({
                         basket_user_token: cookies['cookie-user'], products: [{ ...alldata, quantity: 1 }]
                     });
-                    if (error) console.log('Error inserting product:', error);
+                    if (error) {
+                        console.log('Error inserting product:', error);
+                        Swal.fire('Error', 'Error adding to basket.', 'error');
+                    } else {
+                        Swal.fire('Success', 'Product added to basket!', 'success');
+                    }
                 } else {
                     const basket = data[0];
                     const productIndex = basket.products.findIndex(product => product.id === alldata.id);
@@ -44,11 +51,15 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
 
                     if (error) {
                         console.log('Error updating basket:', error);
+                        Swal.fire('Error', 'Error updating basket.', 'error');
+                    } else {
+                        Swal.fire('Success', 'Basket updated!', 'success');
                     }
                 }
             }
         } catch (error) {
             console.log('Error adding to basket:', error);
+            Swal.fire('Error', 'Error adding to basket.', 'error');
         }
     };
 
@@ -92,6 +103,7 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
 
             if (wishlistError) {
                 console.error('Wishlist fetch error:', wishlistError);
+                Swal.fire('Error', 'Error managing wishlist.', 'error');
                 return;
             }
 
@@ -101,8 +113,13 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
                     wishlist_products: [alldata]
                 });
 
-                if (insertError) console.error('Error inserting product:', insertError);
-                else setIsInWishlist(true);
+                if (insertError) {
+                    console.error('Error inserting product:', insertError);
+                    Swal.fire('Error', 'Error adding to wishlist.', 'error');
+                } else {
+                    setIsInWishlist(true);
+                    Swal.fire('Success', 'Product added to wishlist!', 'success');
+                }
             } else {
                 const userWishlist = wishlistData[0];
                 const isProductAlreadyInWishlist = userWishlist.wishlist_products.some(
@@ -119,8 +136,13 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
                         .update({ wishlist_products: updatedWishlistProducts })
                         .eq('wishlist_user_token', cookies['cookie-user']);
 
-                    if (updateError) console.error('Error removing product:', updateError);
-                    else setIsInWishlist(false);
+                    if (updateError) {
+                        console.error('Error removing product:', updateError);
+                        Swal.fire('Error', 'Error removing from wishlist.', 'error');
+                    } else {
+                        setIsInWishlist(false);
+                        Swal.fire('Success', 'Product removed from wishlist!', 'success');
+                    }
                 } else {
                     const updatedWishlistProducts = [...userWishlist.wishlist_products, alldata];
 
@@ -129,12 +151,18 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
                         .update({ wishlist_products: updatedWishlistProducts })
                         .eq('wishlist_user_token', cookies['cookie-user']);
 
-                    if (updateError) console.error('Error adding product:', updateError);
-                    else setIsInWishlist(true);
+                    if (updateError) {
+                        console.error('Error adding product:', updateError);
+                        Swal.fire('Error', 'Error adding to wishlist.', 'error');
+                    } else {
+                        setIsInWishlist(true);
+                        Swal.fire('Success', 'Product added to wishlist!', 'success');
+                    }
                 }
             }
         } catch (error) {
             console.error('Error updating wishlist:', error);
+            Swal.fire('Error', 'Error managing wishlist.', 'error');
         }
     };
 
@@ -145,36 +173,36 @@ const ShopSingleCard = ({ id, image, title, information, color, price, quantity,
 
     return (
         <div className='shop-single-card'>
-            <div class="col">
-                <div class="card">
+            <div className="col">
+                <div className="card">
                     <div className='image-div'>
-                        <img src={image} class="card-img-top" alt="..." />
+                        <img src={image} className="card-img-top" alt="..." />
                         <div className='ooo'></div>
                         <div className='card-information-div'>
-                            <h5 class="card-title">{title}</h5>
-                            <h5 class="card-text mt-2">{information}</h5>
+                            <h5 className="card-title">{title}</h5>
+                            <h5 className="card-text mt-2">{information}</h5>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
                         <div className='price-and-shopping-buttons'>
-                            <div class="product-price">$ {price}</div>
+                            <div className="product-price">$ {price}</div>
                             <div className='market-buttons'>
                                 {!cookies['cookie-user'] ?
                                     <Link to='/auth/login' className='add-to-card-button me-2'>
-                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <i className="fa-solid fa-cart-shopping"></i>
                                     </Link>
                                     :
                                     <button className='add-to-card-button' onClick={dataSendToBasket}>
-                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <i className="fa-solid fa-cart-shopping"></i>
                                     </button>}
 
                                 {!cookies['cookie-user'] ?
                                     <Link to='/auth/login' className='wishlist-button'>
-                                        {isInWishlist ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-regular fa-bookmark"></i>}
+                                        {isInWishlist ? <i className="fa-solid fa-bookmark"></i> : <i className="fa-regular fa-bookmark"></i>}
                                     </Link>
                                     :
                                     <button className='wishlist-button' onClick={() => { dataSendToWishlist() }}>
-                                        {isInWishlist ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-regular fa-bookmark"></i>}
+                                        {isInWishlist ? <i className="fa-solid fa-bookmark"></i> : <i className="fa-regular fa-bookmark"></i>}
                                     </button>}
                             </div>
                         </div>

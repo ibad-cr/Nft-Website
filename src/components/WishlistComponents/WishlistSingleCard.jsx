@@ -43,7 +43,7 @@ const WishlistSingleCard = ({ alldata, index }) => {
                 <div className="card mt-2">
                     <div className='product-count'>{index + 1}</div>
                     <div className='deleteButton'>
-                        <button onClick={deleteItem}><CiTrash style={{ fontSize: '20px' }} /></button>
+                        <button onClick={() => { deleteItem(); window.location.reload() }}><CiTrash style={{ fontSize: '20px' }} /></button>
                     </div>
                     <div className="card-body">
                         <div className='products-information'>
@@ -64,7 +64,7 @@ const WishlistSingleCard = ({ alldata, index }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

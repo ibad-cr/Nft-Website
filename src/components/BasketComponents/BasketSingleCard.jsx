@@ -83,7 +83,6 @@ const BasketSingleCard = ({ alldata, index }) => {
             console.log(error);
         }
     };
-    
 
     return (
         <div className='basket-single-card mb-3'>
@@ -106,7 +105,7 @@ const BasketSingleCard = ({ alldata, index }) => {
                                     <li className='list-group-item'><button onClick={increment}>+</button></li>
                                 </ul>
                                 <div className='d-flex justify-content-between align-items-center' style={{ borderTop: '2px solid white' }}>
-                                    <div className='single-delete-button' onClick={deleteItem}><CiTrash /></div>
+                                    <div className='single-delete-button' onClick={() => { deleteItem(); window.location.reload() }}><CiTrash /></div>
                                     <div className='product-price'>Price: ${(totalPrice).toFixed(2)}</div>
                                 </div>
                             </div>
