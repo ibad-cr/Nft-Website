@@ -39,7 +39,7 @@ const WishlistSingleCard = ({ alldata, index }) => {
 
     return (
         <div>
-            <div className='wishlist-single-card'>
+            <div className='wishlist-single-card mb-3'>
                 <div className="card mt-2">
                     <div className='product-count'>{index + 1}</div>
                     <div className='deleteButton'>

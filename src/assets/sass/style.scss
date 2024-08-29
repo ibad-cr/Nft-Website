@@ -2009,6 +2009,25 @@
     font-family: 'Rubik Wet Paint', cursive;
 }
 
+::-webkit-scrollbar {
+    background: currentcolor;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: currentcolor;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 50em !important;
+}
+
+.toastify-message {
+    background: #212529 !important;
+    box-shadow: 1px 1px 1px 1px rgb(255, 255, 255, 0.2) !important;
+}
+
 /* Import other CSS files */
 @import 'navbar';
 @import 'home';

@@ -38,19 +38,19 @@ const Wishlist = () => {
     };
 
     return (
-        <div className='wishlist-components mt-4'>  
+        <div className='wishlist-components mt-4'>
             <div className='wishlist-container'>
                 <div className='wishlist-header mb-4'>
                     <div><i class="fa-solid fa-bookmark"></i></div>
 
                     <div className='right-items'>
-                        <button onClick={deleteAllItem} className='wishliat-clear-button'>Clear Wishlist</button>
+                        <button onClick={() => { deleteAllItem(); window.location.reload() }} className='wishliat-clear-button'>Clear Wishlist</button>
                     </div>
                 </div>
-                <div className='row'>
+                <div className='row '>
                     {filterWishlistUserToken === undefined ? <h3 className='text-center'>Not Found Product</h3> :
                         (filterWishlistUserToken.wishlist_products.map((item, index) => (
-                            <div className=' col-12 col-sm-12 col-md-6 mb-5'>
+                            <div className='col-12 col-sm-12 col-md-6'>
                                 <WishlistSingleCard key={index} alldata={item} index={index} />
                             </div>
                         )))}

@@ -158,7 +158,7 @@ const Navbar = () => {
                     <nav className={`nav ${openSearch ? 'openSearch' : ''} ${openNav ? 'openNav' : ''}`}>
                         <i className="uil uil-bars navOpenBtn" onClick={toggleNav} style={{ background: 'none' }}></i>
                         <Link to="/" className="nav-logo">
-                            <img src="../src/assets/img/pngwing.png" alt="" />
+                            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-moneda-dolar-5429328-4544496.png?f=webp" alt="" />
                         </Link>
                         <ul className="nav-links">
                             <i className="uil uil-times navCloseBtn" onClick={() => setOpenNav(false)} style={{ background: 'none' }}></i>

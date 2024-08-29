@@ -37,7 +37,6 @@ const Login = () => {
                         toast.success("Login is successful!", {
                             position: 'top-right',
                             className: 'toastify-message'
-
                         });
 
                         setTimeout(() => {

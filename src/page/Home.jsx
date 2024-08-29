@@ -2,12 +2,13 @@ import React from 'react'
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import ShopSingleCard from '../components/ShopComponents/ShopSingleCard';
 import { Link } from 'react-router-dom';
 import HomeSwiperJs from '../components/HomeComponents/HomeSwiperJs';
-
+import { ToastContainer, toast } from 'react-toastify';
+import { useCookies } from 'react-cookie';
 
 const Home = () => {
+    const [cookies, setCookie] = useCookies(['cookie-user', 'admin-token']);
 
     const shop = useSelector(state => state.shop);
 
@@ -18,9 +19,25 @@ const Home = () => {
     }, [shop])
 
 
+    const showToastMessage = () => {
+        toast.success("Welcome 😀.Please register and enjoy all the features 👋", {
+            position: 'top-right',
+            className: 'toastify-message'
+        });
+    }
+
+    useEffect(() => {
+        if (!cookies['cookie-user']) {
+            showToastMessage();
+        } else {
+            ''
+        }
+    }, []);
+
     return (
         <div>
             <main>
+                <ToastContainer />
                 <div className="home-wrapper">
                     <div className="home-container">
                         <div className='home-elements mt-4 mb-5'>
@@ -29,7 +46,7 @@ const Home = () => {
                                 <div className="text-section">
                                     <h4 className='text-center mb-3'>What is an NFT?</h4>
                                     <p>
-                                       <strong> Unique and Verified:</strong> NFTs are unique and recorded on the blockchain, which makes
+                                        <strong> Unique and Verified:</strong> NFTs are unique and recorded on the blockchain, which makes
                                         it difficult for them to be counterfeit or duplicated. Each NFT has its own unique
                                         identifier and metadata.
                                     </p>

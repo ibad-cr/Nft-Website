@@ -38,7 +38,7 @@ const Basket = () => {
     }
   }, [findUser]);
 
-  
+
   // ===================================DeleteAllItem==================================================
   const deleteAllItem = async () => {
     const { data, error } = await supabase.from('Basket')
@@ -51,7 +51,7 @@ const Basket = () => {
       <div className='basket-container'>
         <div className='basket-header mb-4'>
           <div className='total-price'>Total Price: ${(totalPrice).toFixed(2)}</div>
- 
+
           <div className='right-items'>
             <Link to=''>Complete Order</Link>
             <button className='basket-clear-button' onClick={() => { deleteAllItem(); window.location.reload() }}>Clear Basket</button>
@@ -60,7 +60,9 @@ const Basket = () => {
         <div className='row'>
           {findUser === undefined ? <h3 className='text-center'>Not Found Product</h3> :
             (findUser.products.map((item, index) => (
-              <BasketSingleCard key={index} alldata={item} index={index} />
+              <div className='col-12 col-sm-12 col-md-6'>
+                <BasketSingleCard key={index} alldata={item} index={index} />
+              </div>
             )))
           }
         </div>

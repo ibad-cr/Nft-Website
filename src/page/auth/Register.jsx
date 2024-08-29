@@ -49,6 +49,7 @@ const Register = () => {
     ) {
       toast.error("Please fill all inputs", {
         position: 'top-right',
+        className: 'toastify-message',
       });
       return;
     }
@@ -56,6 +57,7 @@ const Register = () => {
     if (password.current.value !== confirmPassword.current.value) {
       toast.error("Passwords do not match", {
         position: 'top-right',
+        className: 'toastify-message'
       });
       return;
     }
@@ -72,13 +74,11 @@ const Register = () => {
       });
 
       toast.promise(myPromise, {
-        pending: "Submitting form...",
-        success: "Form submitted successfully!",
         error: "Validation failed. Please check your input.",
-        className: 'toast-message',
+        className: 'toastify-message',
       });
 
-      try {
+      try { 
         const { error } = await supabase.from('Users').insert({
           fullname: fullname.current.value,
           lastname: lastname.current.value,
@@ -91,10 +91,12 @@ const Register = () => {
         if (error) {
           toast.error("Error: " + error.message, {
             position: 'top-right',
+            className: 'toastify-message',
           });
         } else {
           toast.success("Registration successful!", {
             position: 'top-right',
+            className: 'toastify-message',
           });
 
           setTimeout(() => {
@@ -104,6 +106,7 @@ const Register = () => {
       } catch (err) {
         toast.error("An unexpected error occurred", {
           position: 'top-right',
+          className: 'toastify-message',
         });
         console.error(err);
       }
@@ -113,6 +116,7 @@ const Register = () => {
     data.length === 0 ? createUsers() : data.find(item => item.email === email.current.value) ?
       toast.error("This email is already registered!", {
         position: 'top-right',
+        className: 'toastify-message',
       }) : createUsers();
 
   };

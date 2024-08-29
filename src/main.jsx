@@ -19,7 +19,7 @@ import { shopData, userData } from './tools/function/calldata.jsx'
 import 'react-toastify/dist/ReactToastify.css';
 import { ModeProvider } from './context/Mode.jsx';
 import { FontsProvider } from './context/Fonts.jsx';
-
+import { FavoriteFontsProvider } from './context/FavoriteFonts.jsx'
 
 shopData();
 userData();
@@ -28,9 +28,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ModeProvider>
       <FontsProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <FavoriteFontsProvider>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </FavoriteFontsProvider>
       </FontsProvider>
     </ModeProvider>
   </React.StrictMode>,

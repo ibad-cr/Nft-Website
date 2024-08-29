@@ -11,7 +11,7 @@ const Footer = () => {
           <p class="col-md-4 mb-0 footer-date">© {currentDate} Company, Inc</p>
 
           <Link to="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="../src/assets/img/pngwing.png" alt="" />
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-moneda-dolar-5429328-4544496.png?f=webp" alt="" />
           </Link>
 
           <ul class="nav col-md-4 justify-content-end">

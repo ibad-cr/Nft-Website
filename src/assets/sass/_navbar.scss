@@ -38,7 +38,10 @@ header {
         background: none;
 
         img {
+            height: 50px;
             width: 50px;
+            object-fit: cover;
+            border-radius: 50%;
             background: none;
         }
     }
@@ -338,7 +341,7 @@ header {
             height: 100%;
             max-width: 80%;
             width: 100%;
-            padding-top: 300px;
+            padding-top: 400px;
             row-gap: 30px;
             flex-direction: column;
             background: #343a40;

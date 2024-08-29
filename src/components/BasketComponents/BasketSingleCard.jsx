@@ -86,7 +86,7 @@ const BasketSingleCard = ({ alldata, index }) => {
     
 
     return (
-        <div className='basket-single-card col-12 col-sm-12 col-md-6 mb-5'>
+        <div className='basket-single-card mb-3'>
             <div className="card mt-2">
                 <div className='product-count'>{index + 1}</div>
                 <div className="card-body">

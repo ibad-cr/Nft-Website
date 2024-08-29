@@ -23,3 +23,35 @@
         }
     }
 }
+
+@media (max-width: 769px) {
+    .wishlist-components {
+
+        .wishlist-container {
+            .row {
+                display: flex;
+                flex-direction: column;
+
+                .col-md-6 {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .wishlist-components {
+
+        .wishlist-container {
+            .row {
+                display: flex;
+                flex-direction: column;
+
+                .col-md-6 {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
