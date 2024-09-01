@@ -196,7 +196,7 @@ const Navbar = () => {
                                                             <span className='add-to-card-counter'>{basketNavbarQuantity}</span>
                                                         </li>
                                                         <li className='list-group-item mb-2'>
-                                                            <NavLink to={`/auth/account/${cookies['cookie-user']}`} className='account-button' onClick={() => { setOpenDropdownIndex(null); }}>
+                                                            <NavLink to={`/auth/account/user/${cookies['cookie-user']}`} className='account-button' onClick={() => { setOpenDropdownIndex(null); }}>
                                                                 <CiUser className='me-4' style={{ background: 'none', fontSize: '25px' }} />
                                                                 Account
                                                             </NavLink>

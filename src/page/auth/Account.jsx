@@ -12,20 +12,22 @@ import { TiStarFullOutline } from 'react-icons/ti';
 
 const Account = () => {
     const [cookies, setCookie, removeCookie] = useCookies(['cookie-user', 'admin-token']);
+    
     const user = useSelector(state => state.user);
+    const { token } = useParams();
+    const filterUsersInformation = user.length == 0 ? '' : user.find(item => item.user_token === token);
+    console.log(filterUsersInformation);
 
     const [mode, setMode] = useContext(ModeContext);
     const [fonts, setFonts] = useContext(FontsContext);
     const [order, setOrder] = useState(false);
     const [edit, setEdit] = useState(false);
-    const { token } = useParams();
 
     const imageLink = useRef();
     const fullname = useRef();
     const lastname = useRef();
     const email = useRef();
 
-    const filterUsersInformation = user.length == 0 ? '' : user.find(item => item.user_token === token);
 
     const handleClick = (newMode) => {
         const newClass = mode === 'bodyBgColor' ? newMode : 'bodyBgColor';
@@ -116,8 +118,8 @@ const Account = () => {
                                                 duration: 0.8,
                                                 delay: 0.5,
                                                 ease: [0, 0.71, 0.2, 1.01]
-                                            }}
-                                            className='users-logo text-center'>
+                                                }}
+                                                className='users-logo text-center'>
 
                                             <img className='mb-3' src={edit ? 'https://as1.ftcdn.net/v2/jpg/02/89/49/22/1000_F_289492257_augSIlCtit7AQhCZQwYPF1X1XgtwwJkN.jpg' : filterUsersInformation.image} alt="User" />
                                         </motion.div>

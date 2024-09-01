@@ -103,7 +103,7 @@ const App = () => {
           <Route path='/shop/shopSingleCard' element={<ShopSingleCard />}></Route>
           <Route path='/auth/login' element={<Login />}></Route>
           <Route path='/auth/register' element={<Register />}></Route>
-          <Route path='/auth/account/:token' element={<Account />}></Route>
+          <Route path='/auth/account/user/:token' element={<Account />}></Route>
           <Route path='/basket' element={<Basket />}></Route>
           <Route path='/wishlist' element={<Wishlist />}></Route>
           <Route path='/wishlist/wishlistSingleCard' element={<WishlistSingleCard />}></Route>
