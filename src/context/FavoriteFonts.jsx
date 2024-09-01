@@ -1,11 +1,9 @@
-import { useState } from "react";
-import { createContext } from "react";
+import { useState, createContext } from "react";
 
 export const FavoriteFontsContext = createContext();
 
 export const FavoriteFontsProvider = ({ children }) => {
-
-    const [favorite, setFavorite] = useState({
+    const savedFavorites = JSON.parse(localStorage.getItem("favorite")) || {
         "zen-dots": "star",
         "koulen-font": "star",
         "bungee-font": "star",
@@ -18,16 +16,13 @@ export const FavoriteFontsProvider = ({ children }) => {
         "novaRound-font": "star",
         "akaya-font": "star",
         "rubikWet-font": "star"
-    });
+    };
 
-    if (localStorage.getItem("favorite") === null) {
-        localStorage.setItem("favorite", "star")
-    }
+    const [favorite, setFavorite] = useState(savedFavorites);
 
     return (
         <FavoriteFontsContext.Provider value={[favorite, setFavorite]}>
             {children}
         </FavoriteFontsContext.Provider>
-    )
-}
-
+    );
+};
