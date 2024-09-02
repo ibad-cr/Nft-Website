@@ -55,11 +55,11 @@ const Shop = () => {
         } else {
             const result = shop.filter(item => item.color === cat);
             setFilterShop(result);
+            console.log('Filtered Products:', result);
         }
     };
 
     // ==========================Filter-Quality-Buttons============================================
-
     const filterQualityData = (cat) => {
         const result = shop.filter(item => item.quality === cat);
         setFilterShop(result);
@@ -83,7 +83,15 @@ const Shop = () => {
     }, [shop])
 
 
-    const filteredProducts = !keyword ? product : product.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
+    useEffect(() => {
+        const updatedProducts = !keyword
+            ? filterShop
+            : filterShop.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()));
+
+        setProduct(updatedProducts);
+    }, [filterShop, keyword]);
+
+    const filteredProducts = product;
 
     useEffect(() => {
         Aos.init();
